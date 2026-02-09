@@ -1,0 +1,34 @@
+# Flower Federated Learning Requirements (Fixed)
+# Python 3.12.8 compatible
+# Note: TensorFlow removed due to protobuf conflict with Flower
+
+# Core Flower packages
+flwr==1.10.0
+ray==2.31.0
+flwr-datasets[vision]==0.2.0
+
+# PyTorch (compatible versions)
+torch==2.5.0
+torchvision==0.20.0
+
+# Data science and visualization
+matplotlib==3.10.3
+scikit-learn==1.7.0
+seaborn==0.13.2
+numpy>=1.23,<2.0
+
+# Jupyter and widgets
+ipywidgets==8.1.2
+
+# NLP (optional, for transformer models)
+transformers==4.42.4
+accelerate==0.30.0
+
+# Flower dependencies (compatible versions)
+protobuf>=4.25.2,<5.0.0
+typer[all]>=0.9.0,<0.10.0
+requests>=2.32.1
+fsspec[http]<=2024.3.1,>=2023.1.0
+
+# Note: If you need TensorFlow, create a separate virtual environment
+# TensorFlow 2.20.0 requires protobuf>=5.28.0 which conflicts with Flower
